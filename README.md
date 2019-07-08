@@ -95,3 +95,68 @@ Package:
 ```
 jar -cvf  mods/zoo.staff.jar -C staff/ .
 ```
+
+# Diving into the module-info file
+
+## Exports
+In the module-info.java in the talks folder:
+1. Uncomment ```exports zoo.animal.talks.content to zoo.animal.staff;```
+2. Comment out ```exports zoo.animal.talks.content to zoo.animal.staff;```
+
+## Requires
+In the module-info.java in the care folder:
+1. Uncomment ```requires transitive zoo.animal.feeding;```
+1. Comment out ```requires zoo.animal.feeding;```
+
+In the module-info.java in the talks folder:
+1. Uncomment ```requires transitive zoo.animal.care;```
+1. Comment out ```requires zoo.animal.feeding;```
+1. Comment out ```requires zoo.animal.care;```
+
+In the module-info.java in the staff folder:
+1. Comment out ```requires zoo.animal.feeding;```
+1. Comment out ```requires zoo.animal.care;```
+
+## Provides, uses and opens
+Don't need to be able to use in examples for this exam
+
+# Discovering Modules
+
+## The java Command
+Describing a module:
+```
+java -p mods -d zoo.animal.feeding
+```
+
+Alternate form of describing a module
+```
+java -p mods --describe-module zoo.animal.feeding
+```
+Listing available modules in JDK:
+```
+java --list-modules
+```
+Listing available modules including ours:
+java -p mods --list-modules
+
+## The jar Command
+Describing a module:
+```
+jar -f mods/zoo.animal.feeding.jar -d
+```
+Alternate form of describing a module:
+```
+jar --file mods/zoo.animal.feeding.jar --describe-module
+```
+## The jdeps Command
+Listing dependencies
+```
+jdeps -s mods/zoo.animal.feeding.jar
+```
+Alternate form of listing dependencies:
+```
+jdeps -summary mods/zoo.animal.feeding.jar
+```
+
+## The jmod command
+Don't need to be able to use in examples for this exam
