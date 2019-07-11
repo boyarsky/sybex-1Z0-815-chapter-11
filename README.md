@@ -44,7 +44,7 @@ Run program from jar
 java -p mods -m zoo.animal.feeding/zoo.animal.feeding.Task
 ```
 
-# Updating our Example for Mul-tiple Modules
+# Updating our Example for Multiple Modules
 
 ## Updating the Feeding Module
 See the feeding folder for module zoo.animal.feeding. Uncomment the commented out line in module-info.java
@@ -138,6 +138,11 @@ java --list-modules
 ```
 Listing available modules including ours:
 java -p mods --list-modules
+
+Showing Module Resolution:
+```
+java --show-module-resolution -p feeding -m zoo.animal.feeding/zoo.animal.feeding.Task
+```
 
 ## The jar Command
 Describing a module:
