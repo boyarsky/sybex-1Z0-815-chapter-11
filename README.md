@@ -24,6 +24,10 @@ javac -p mods -d feeding feeding/zoo/animal/feeding/*.java feeding/*.java
 javac -p mods -d feeding feeding/zoo/animal/feeding/*.java feeding/module-info.java
 
 javac -p mods -d feeding feeding/zoo/animal/feeding/Task.java feeding/module-info.java
+
+javac -p mods -d feeding feeding/zoo/animal/feeding/Task.java feeding/*.java
+
+javac -p mods -d feeding feeding/zoo/animal/feeding/*.java feeding/*.java
 ```
 ## Running our First Module
 Run program
