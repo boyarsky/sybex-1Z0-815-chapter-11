@@ -102,8 +102,8 @@ jar -cvf  mods/zoo.staff.jar -C staff/ .
 
 ## Exports
 In the module-info.java in the talks folder:
-1. Uncomment ```exports zoo.animal.talks.content to zoo.animal.staff;```
-2. Comment out ```exports zoo.animal.talks.content to zoo.animal.staff;```
+1. Uncomment ```exports zoo.animal.talks.content to zoo.staff;```
+2. Comment out ```exports zoo.animal.talks.content;```
 
 ## Requires
 In the module-info.java in the care folder:
