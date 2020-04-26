@@ -139,7 +139,9 @@ Listing available modules in JDK:
 java --list-modules
 ```
 Listing available modules including ours:
+```
 java -p mods --list-modules
+```
 
 Showing Module Resolution:
 ```
