@@ -167,15 +167,11 @@ jdeps -summary mods/zoo.animal.feeding.jar
 
 Listing dependencies with module path
 ```
-jdeps -s 
-   --module-path mods 
-   mods/zoo.animal.care.jar
+jdeps -s --module-path mods mods/zoo.animal.care.jar
 ```
 Alternate form of listing dependencies with module path
 ```
-jdeps -summary 
-   --module-path mods 
-   mods/zoo.animal.care.jar
+jdeps -summary --module-path mods mods/zoo.animal.care.jar
 ```
 
 ## The jmod command
