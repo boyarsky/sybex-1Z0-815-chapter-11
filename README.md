@@ -7,7 +7,7 @@ Also see:
 * Our [main book page](https://www.selikoff.net/ocp11-1/)
 * To buy the book: [Amazon](https://www.amazon.com/Oracle-Certified-Professional-Programmer-Study/dp/1119584701)
 
-Below is an outline of the chapter and the commands. Note that in this github repo, the commands are one line so you can copy/paste them intro your command line. In the book, we used multiple lines for ease in reading/studying.
+Below is an outline of the chapter and the commands. Note that in this github repo, the commands are one line so you can copy/paste them into your command line. In the book, we used multiple lines for ease in reading/studying.
 
 # Creating and Running a Modular Program
 ## Creating the Files
@@ -102,8 +102,8 @@ jar -cvf  mods/zoo.staff.jar -C staff/ .
 
 ## Exports
 In the module-info.java in the talks folder:
-1. Uncomment ```exports zoo.animal.talks.content to zoo.animal.staff;```
-2. Comment out ```exports zoo.animal.talks.content to zoo.animal.staff;```
+1. Uncomment ```exports zoo.animal.talks.content to zoo.staff;```
+2. Comment out ```exports zoo.animal.talks.content;```
 
 ## Requires
 In the module-info.java in the care folder:
@@ -139,7 +139,9 @@ Listing available modules in JDK:
 java --list-modules
 ```
 Listing available modules including ours:
+```
 java -p mods --list-modules
+```
 
 Showing Module Resolution:
 ```
@@ -167,15 +169,11 @@ jdeps -summary mods/zoo.animal.feeding.jar
 
 Listing dependencies with module path
 ```
-jdeps -s 
-   --module-path mods 
-   mods/zoo.animal.care.jar
+jdeps -s --module-path mods mods/zoo.animal.care.jar
 ```
 Alternate form of listing dependencies with module path
 ```
-jdeps -summary 
-   --module-path mods 
-   mods/zoo.animal.care.jar
+jdeps -summary --module-path mods mods/zoo.animal.care.jar
 ```
 
 ## The jmod command
