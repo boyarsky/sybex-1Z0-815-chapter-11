@@ -3,6 +3,7 @@
 
 # module output directory
 mods
+!mods/.gitkeep
 
 # IntelliJ
 .idea

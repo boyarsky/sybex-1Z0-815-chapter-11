@@ -9,8 +9,6 @@ Also see:
 
 Below is an outline of the chapter and the commands. Note that in this github repo, the commands are one line so you can copy/paste them into your command line. In the book, we used multiple lines for ease in reading/studying.
 
-Note: You may have to create the "mods" directory before running depending on your OS
-
 # Creating and Running a Modular Program
 ## Creating the Files
 See the feeding folder for module zoo.animal.feeding
